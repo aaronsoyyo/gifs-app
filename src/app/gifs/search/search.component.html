@@ -1,0 +1,28 @@
+<div class="p-2" style="width:100%" >
+    <h3 class="bg-warning bg-gradient text-dark d-inline p-2" style="width:35%">Search:</h3>
+    <input type="text" 
+    class="form-control d-inline p-2" style="width:65%; "
+    placeholder="Search gifts..."
+    (keyup.enter)="search( txtSearch.value )"
+    #txtSearch>
+</div>
+
+<div class="p-2" style="width:100%">
+    <h3 class="bg-warning bg-gradient text-dark d-inline p-2" style="width:35%; margin-right:20px;">Limit:</h3>
+    <input type="number" 
+    class="form-control d-inline p-2" style="width:10%; "
+    placeholder="1" min="1" max="50"   
+    #txtLimit>
+
+    <h3 class="bg-warning bg-gradient text-dark d-inline p-2" style="width:35%">Language:</h3>
+    <select class="form-control d-inline p-2 bg-dark bg-gradient text-warning fw-bold" style="width:15%; margin-right:20px;"
+    #txtLocale>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+    </select>
+
+    <button class="form-control d-inline p-2 bg-dark bg-gradient text-warning fw-bold" style="width:5%" 
+    (click)="searchGo(txtSearch.value, txtLimit.valueAsNumber, txtLocale.value)">Go!</button>
+    
+</div>
