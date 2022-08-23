@@ -27,11 +27,9 @@ export class SearchComponent implements OnInit {
     limit = (Number.isInteger(limit))? limit : 1;    
     this.gifsService.searchGifsGo(key, limit, locale);
     this.txtSearch.nativeElement.value = '';
-<<<<<<< HEAD
-  this.txtLimit.nativeElement.valueAsNumber = limit;    
-=======
-    //this.txtLimit.nativeElement.valueAsNumber = limit;    
->>>>>>> 82b9e45 (first-upload)
+
+    this.txtLimit.nativeElement.valueAsNumber = limit;
+    //this.txtLimit.nativeElement.valueAsNumber = limit;
   }
 
 }
